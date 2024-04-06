@@ -402,10 +402,7 @@
       </g>
     </svg>
 
-    <span>{{ title }} app is running!</span>
-    <span>{{ description }}</span>
     <app-item></app-item>
-    <app-item-manual></app-item-manual>
 
     <svg
       id="rocket-smoke"
@@ -428,7 +425,13 @@
   <!-- Resources -->
   <h2>Resources</h2>
   <p>Here are some links to help you get started:</p>
-  <app-lesson-manual></app-lesson-manual>
+
+  <app-item-manual
+    (test-put)="childMessage = $event"
+    [data]="'親からのメッセージだよ'"
+    [test]="'testメッセージです'"
+  ></app-item-manual>
+  {{ childMessage }}
 
   <div class="card-container">
     <a

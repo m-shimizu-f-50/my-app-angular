@@ -8,4 +8,5 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = '私の最初のAngular';
   description = '説明テキストですよ';
+  childMessage = '初期値';
 }
