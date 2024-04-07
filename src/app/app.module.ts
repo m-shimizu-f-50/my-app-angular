@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { ItemComponent } from './item/item.component';
 import { ItemManualComponent } from './item-manual/item-manual.component';
 import { LessonManualComponent } from './lesson-manual/lesson-manual.component';
+import { LessonIfComponent } from './lesson-if-manual/lesson-if.component';
 
 @NgModule({
   declarations: [
@@ -13,6 +14,7 @@ import { LessonManualComponent } from './lesson-manual/lesson-manual.component';
     ItemComponent,
     ItemManualComponent,
     LessonManualComponent,
+    LessonIfComponent,
   ],
   imports: [BrowserModule, HttpClientModule],
   providers: [],

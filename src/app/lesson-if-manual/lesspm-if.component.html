@@ -1,0 +1,9 @@
+<div *ngIf="isActive">
+  <p>構造ディレクティブ</p>
+</div>
+<button (click)="toggle()">表示・非表示変更</button>
+
+<div *ngFor="let item of items" [ngStyle]="{ display: 'flex' }">
+  <p>{{ item.name }}</p>
+  <p>{{ item.price }}</p>
+</div>
