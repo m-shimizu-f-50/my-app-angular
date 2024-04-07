@@ -1,0 +1,27 @@
+<div>
+  <h3>テンプレート駆動フォーム</h3>
+  <form #myForm="ngForm" (ngSubmit)="submit()">
+    <div>
+      <label for="template-form-name">名前</label>
+      <input
+        id="template-form-name"
+        name="name"
+        type="text"
+        [(ngModel)]="user.name"
+        required
+      />
+    </div>
+    <div>
+      <label for="template-form-email">メールアドレス</label>
+      <input
+        id="template-form-email"
+        name="email"
+        type="email"
+        [(ngModel)]="user.email"
+        required
+        email
+      />
+    </div>
+    <input type="submit" value="Submit" [disabled]="myForm.invalid" />
+  </form>
+</div>

@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 
@@ -7,6 +8,7 @@ import { ItemComponent } from './item/item.component';
 import { ItemManualComponent } from './item-manual/item-manual.component';
 import { LessonManualComponent } from './lesson-manual/lesson-manual.component';
 import { LessonIfComponent } from './lesson-if-manual/lesson-if.component';
+import { LessonTemplateForm } from './lesson-templete-form/lesson-template-form.component';
 
 @NgModule({
   declarations: [
@@ -15,8 +17,9 @@ import { LessonIfComponent } from './lesson-if-manual/lesson-if.component';
     ItemManualComponent,
     LessonManualComponent,
     LessonIfComponent,
+    LessonTemplateForm,
   ],
-  imports: [BrowserModule, HttpClientModule],
+  imports: [BrowserModule, HttpClientModule, FormsModule],
   providers: [],
   bootstrap: [AppComponent],
 })
