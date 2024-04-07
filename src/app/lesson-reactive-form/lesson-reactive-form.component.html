@@ -1,0 +1,40 @@
+<div>
+  <h3>リアクティブフォーム</h3>
+  <form [formGroup]="userForm" (ngSubmit)="reactiveSubmit()">
+    <div>
+      <label for="template-form-name">名前</label>
+      <input
+        id="template-form-name"
+        name="name"
+        type="text"
+        formControlName="name"
+      />
+      <span
+        *ngIf="userForm.controls['name'].errors?.['required'] && (userForm.controls['name'].dirty || userForm.controls['name'].touched)"
+        >名前は必須です。</span
+      >
+      <span
+        *ngIf="userForm.controls['name'].errors?.['minlength'] && (userForm.controls['name'].dirty || userForm.controls['name'].touched)"
+        >名前は4文字以上必要です。</span
+      >
+    </div>
+    <div>
+      <label for="template-form-email">メールアドレス</label>
+      <input
+        id="template-form-email"
+        name="email"
+        type="email"
+        formControlName="email"
+      />
+      <span
+        *ngIf="userForm.controls['email'].errors?.['required'] && (userForm.controls['email'].dirty || userForm.controls['email'].touched)"
+        >メールアドレスは必須です。</span
+      >
+      <span
+        *ngIf="userForm.controls['email'].errors?.['email'] && (userForm.controls['email'].dirty || userForm.controls['email'].touched)"
+        >メールアドレスの形式で入力してください。</span
+      >
+    </div>
+    <input type="submit" value="Submit" [disabled]="userForm.invalid" />
+  </form>
+</div>
