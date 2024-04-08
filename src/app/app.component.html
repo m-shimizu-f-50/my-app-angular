@@ -1,5 +1,8 @@
-<div *ngFor="let book of getBooks(); let i = index">
-  <p>{{ i + 1 }}</p>
-  <p>{{ book.name }}</p>
-  <p>{{ book.price }}</p>
-</div>
+<h1>Angular Route Test</h1>
+<nav>
+  <ul>
+    <li><a routerLink="/dashboard" routerLinkActive="current">dashboard</a></li>
+  </ul>
+</nav>
+
+<router-outlet></router-outlet>
